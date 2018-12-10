@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="left"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        style="@style/tabRow">
+
+        <TableRow
+            android:id="@+id/TableRow01"
+            style="@style/tabRow">
+
+            <LinearLayout
+                style="@style/tabAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:background="#DDDDDD"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="6dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ch" />
+
+                <TextView
+                    android:id="@+id/TextView09"
+                    style="@style/tabAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CHF"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/foreignFlag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="6dp"
+                    android:scaleType="center"
+                    android:src="@drawable/gb" />
+
+                <TextView
+                    android:id="@+id/symbolForeign"
+                    style="@style/tabAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="CHF"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow03"
+            style="@style/tabRow">
+
+            <TextView
+                android:id="@+id/einsCHF"
+                style="@style/tabAll"
+                android:background="#DDDDDD"
+                android:text="100.00" />
+
+            <TextView
+                android:id="@+id/einsCHFToForeign"
+                style="@style/tabAll"
+                android:background="@drawable/border"
+                android:text="0.00" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow04"
+            style="@style/tabRow">
+
+            <TextView
+                android:id="@+id/einsForeignToCHF"
+                style="@style/tabAll"
+                android:text="0.00" />
+
+            <TextView
+                android:id="@+id/einsForeign"
+                style="@style/tabAll"
+                android:background="@drawable/border"
+                android:text="100.00" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow05"
+            style="@style/tabRow"
+            android:background="#DDDDDD">
+
+            <EditText
+                android:id="@+id/editTextCHF"
+                style="@style/tabAll"
+                android:background="@color/colorAccent"
+                android:hint="amount"
+                android:inputType="numberDecimal">
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/editTextForeign"
+                style="@style/tabAll"
+                android:background="@color/colorAccent"
+                android:hint="amount"
+                android:inputType="numberDecimal" />
+
+            <ToggleButton
+                android:id="@+id/bill_coinBt"
+                style="@style/Widget.AppCompat.Button.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textOff="Swiss Coins"
+                android:textOn="Swiss Bills" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow11"
+            android:background="@drawable/border"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/textView1000"
+                style="@style/tabAll"
+                android:background="#DDDDDD"
+                android:text="1 000.00" />
+
+            <TextView
+                android:id="@+id/bill1000"
+                style="@style/tabAll"
+                android:background="@drawable/border"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/imageView1000"
+                android:layout_width="120dp"
+                android:layout_height="49dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="12dp"
+                android:gravity="left"
+                android:scaleType="fitStart"
+                android:src="@drawable/note_1000_front" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow12"
+            android:background="@drawable/border"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/textView200"
+                style="@style/tabAll"
+                android:background="#DDDDDD"
+                android:text="200.00" />
+
+            <TextView
+                android:id="@+id/bill200"
+                style="@style/tabAll"
+                android:background="@drawable/border"
+                android:text="1 000.00" />
+
+            <ImageView
+                android:id="@+id/imageView200"
+                android:layout_width="100dp"
+                android:layout_height="47dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="12dp"
+                android:gravity="left"
+                android:scaleType="fitStart"
+                android:src="@drawable/note_200_front" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow13"
+            android:background="@drawable/border"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/textView100"
+                style="@style/tabAll"
+                android:background="#DDDDDD"
+                android:text="100.00" />
+
+            <TextView
+                android:id="@+id/bill100"
+                style="@style/tabAll"
+                android:background="@drawable/border"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/imageView100"
+                android:layout_width="106dp"
+                android:layout_height="49dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="12dp"
+                android:gravity="left"
+                android:scaleType="fitStart"
+                android:src="@drawable/note_100_front" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow14"
+            android:background="@drawable/border"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/textView50"
+                style="@style/tabAll"
+                android:background="#DDDDDD"
+                android:text="50.00" />
+
+            <TextView
+                android:id="@+id/bill50"
+                style="@style/tabAll"
+                android:background="@drawable/border"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/imageView50"
+                android:layout_width="91dp"
+                android:layout_height="47dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="12dp"
+                android:gravity="left"
+                android:scaleType="fitStart"
+                android:src="@drawable/note_50_front" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow15"
+            android:background="@drawable/border"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/textView20"
+                style="@style/tabAll"
+                android:background="#DDDDDD"
+                android:text="20.00" />
+
+            <TextView
+                android:id="@+id/bill20"
+                style="@style/tabAll"
+                android:background="@drawable/border"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/imageView20"
+                android:layout_width="87dp"
+                android:layout_height="47dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="12dp"
+                android:gravity="left"
+                android:scaleType="fitStart"
+                android:src="@drawable/note_20_front" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow16"
+            android:background="@drawable/border"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/textView10"
+                style="@style/tabAll"
+                android:background="#DDDDDD"
+                android:text="10.00" />
+
+            <TextView
+                android:id="@+id/bill10"
+                style="@style/tabAll"
+                android:background="@drawable/border"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="82dp"
+                android:layout_height="47dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="12dp"
+                android:gravity="left"
+                android:scaleType="fitStart"
+                android:src="@drawable/note_10_front" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow21"
+            android:background="@drawable/border"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textView500Rappen"
+                style="@style/tabAll"
+                android:background="#DDDDDD"
+                android:text="5.00" />
+
+            <TextView
+                android:id="@+id/coins500"
+                style="@style/tabAll"
+                android:background="@drawable/border"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/imageView500RappenKopf"
+                style="@style/coinsMargins"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/muenze500" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow22"
+            android:background="@drawable/border"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textView200Rappen"
+                style="@style/tabAll"
+                android:background="#DDDDDD"
+                android:text="2.00" />
+
+            <TextView
+                android:id="@+id/coins200"
+                style="@style/tabAll"
+                android:background="@drawable/border"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/imageView200RappenZahl"
+                style="@style/coinsMargins"
+                android:layout_width="102dp"
+                android:layout_height="51dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/muenze200" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow23"
+            android:background="@drawable/border"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textView100Rappen"
+                style="@style/tabAll"
+                android:background="#DDDDDD"
+                android:text="1.00" />
+
+            <TextView
+                android:id="@+id/coins100"
+                style="@style/tabAll"
+                android:background="@drawable/border"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/imageView100RappenKopf"
+                style="@style/coinsMargins"
+                android:layout_width="82dp"
+                android:layout_height="41dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/muenze100" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow24"
+            android:background="@drawable/border"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textView50Rappen"
+                style="@style/tabAll"
+                android:background="#DDDDDD"
+                android:text="0.50" />
+
+            <TextView
+                android:id="@+id/coins50"
+                style="@style/tabAll"
+                android:background="@drawable/border"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/imageView50RappenKopf"
+                style="@style/coinsMargins"
+                android:layout_width="68dp"
+                android:layout_height="34dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/muenze50" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow25"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textView20Rappen"
+                style="@style/tabAll"
+                android:background="#DDDDDD"
+                android:text="0.20" />
+
+            <TextView
+                android:id="@+id/coins20"
+                style="@style/tabAll"
+                android:background="@drawable/border"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/imageView20RappenKopf"
+                style="@style/coinsMargins"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/muenze20" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow26"
+            android:background="@drawable/border"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textView10Rappen"
+                style="@style/tabAll"
+                android:background="#DDDDDD"
+                android:text="0.10" />
+
+            <TextView
+                android:id="@+id/coins10"
+                style="@style/tabAll"
+                android:background="@drawable/border"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/imageView10RappenKopf"
+                style="@style/coinsMargins"
+                android:layout_width="72dp"
+                android:layout_height="36dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/muenze10" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow27"
+            android:background="@drawable/border"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textView5Rappen"
+                style="@style/tabAll"
+                android:background="#DDDDDD"
+                android:text="0.05" />
+
+            <TextView
+                android:id="@+id/coins5"
+                style="@style/tabAll"
+                android:background="@drawable/border"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/imageView5RappenKopf"
+                style="@style/coinsMargins"
+                android:layout_width="64dp"
+                android:layout_height="32dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/muenze5" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
